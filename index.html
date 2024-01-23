@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="keywords" content="HTML, Website Design, Best Practices, Leonardo Gasali, Practice Project" />
-    <meta name="description" content="Explore HTML best practices with Leonardo Gasali's practice project." />
+    <meta name="keywords" content="Stopwatch, Practice Project" />
+    <meta name="description" content="Stopwatch with Leonardo Gasali's practice project." />
     <meta name="author" content="Leonardo Gasali" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <!--==================== Title ====================-->
@@ -19,25 +20,39 @@
     <link rel="stylesheet" href="assets/styles/styles.css">
 
 </head>
+
 <body>
 
-        <!--==================== Header ====================-->
+    <!--==================== Header ====================-->
     <header>
-        <h1 class="title">Stopwatch</h1>
+        <h1 class="main-title">Stopwatch</h1>
     </header>
-
-        <!--==================== Nav ====================-->
-    <nav>
-    </nav>
-
-        <!--==================== Main ====================-->
-    <main id="content">
-        <section></section>
-        <section></section>
-        <section></section>
+    <!--==================== Main ====================-->
+    <main>
+        <div class="container">
+            <h1 class="title_stopwatch">Stopwatch Timer</h1>
+            <div class="stopwatch">
+                <div class="timer">
+                    <span id="minutes">00</span>:
+                    <span id="seconds">00</span>:
+                    <span id="milliseconds">00</span>
+                </div>
+                <div class="controls">
+                    <button id="startBtn">Start</button>
+                    <button id="stopBtn">Stop</button>
+                    <button id="pauseBtn">Pause</button>
+                    <button id="resetBtn">Reset</button>
+                </div>
+                <div class="laps">
+                    <h2 class="lap-title">Lap Timer</h2>
+                    <ul id="laplist">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
-
-        <!--==================== Footer ====================-->
+    <!--==================== Footer ====================-->
     <footer>
         <p>Copyright © <span id="currentYearPlaceholder"></span> Leonardo Gasali<sup>®</sup></p>
     </footer>
@@ -46,4 +61,5 @@
     <script src="assets/scripts/scripts.js"></script>
 
 </body>
+
 </html>

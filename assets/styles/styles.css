@@ -8,12 +8,21 @@
 	3. Header
 	4. Navbar
 	5. Body
-	6. Footer
+	5. Footer
 	7. Media Queries
 
 /*--------------------------------------------------------------
 1. Variables
 --------------------------------------------------------------*/
+:root {
+	--primary-color: #6592fd;
+	--strong-color: #8c61ff;
+	--bg-color: #343090;
+	--bg-color-white: #ffffff;
+	--font-color: #fff;
+	--button-color: #44c2fd;
+	--button-hover: #5f59f7;
+}
 
 /*--------------------------------------------------------------
 2. Global Styles
@@ -37,6 +46,12 @@
 body {
 	line-height: 1.7;
 	-webkit-font-smoothing: antialiased;
+	background: var(--bg-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: sans-serif;
 }
 
 /* Eliminar estilos de lista (viñetas/números) */
@@ -85,14 +100,132 @@ textarea {
 3. Header
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-4. Navbar
+4. Stopwatch
 --------------------------------------------------------------*/
+header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.main-title {
+	font-weight: bold;
+	font-size: 4rem;
+	text-align: center;
+	color: var(--font-color);
+}
+
+.container {
+	background-color: var(--bg-color-white);
+	border-radius: 15px;
+	padding: 30px;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.title_stopwatch {
+	font-weight: bold;
+	font-size: 30px;
+	margin-bottom: 1.5rem;
+}
+
+.timer {
+	font-size: 40px;
+	background-color: var(--button-color);
+	color: var(--font-color);
+	padding: 10px;
+	border-radius: 8px;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+/* 	animation: pulse 1.5s infinite alternate; */
+}
+
+/* @keyframes pulse {
+	from {
+		transform: scale(1);
+	}
+
+	to {
+		transform: scale(1.05);
+	}
+} */
+
+.stopwatch {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.timer span {
+	width: 110px;
+	display: inline-block;
+	text-align: center;
+}
+
+.controls {
+	display: flex;
+	gap: 1rem;
+}
+
+button {
+	padding: 0.75rem 1.5rem;
+	border: none;
+	font-size: 1rem;
+	background-color: var(--button-color);
+	color: var(--font-color);
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+	background-color: var(--button-hover);
+}
+
+.lap-title {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.laps {
+	width: 100%;
+}
+
+ul {
+	background-color: var(--bg-color-white);
+	border-radius: 8px;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+li {
+	padding: 0.5rem;
+}
+
+li:last-child {
+	border-bottom: none;
+}
+
+li span {
+	font-weight: 700;
+}
+
 /*--------------------------------------------------------------
-5. Body
+5. Footer
 --------------------------------------------------------------*/
+footer {
+	background-color: var(--strong-color);
+	bottom: 0;
+	color: var(--font-color);
+	font-weight: bold;
+	height: 4rem;
+	padding: 1rem 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
 /*--------------------------------------------------------------
-6. Footer
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-7. Media Queries
+6. Media Queries
 --------------------------------------------------------------*/
